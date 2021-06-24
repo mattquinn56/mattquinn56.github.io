@@ -1,0 +1,35 @@
+/* Text formatting*/
+body {
+  font-family: Helvetica;
+  background-color: lightsteelblue;
+  margin: 2% 15%;
+}
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+p {
+  font-family: Garamond;
+  font-size: 20px;
+}
+
+/* Text aligning*/
+#left { text-align: left; }
+#right { text-align: right; }
+
+/* Link settings */
+a:link {
+  color: maroon;
+  text-decoration: none;
+}
+a:visited {
+  color: maroon;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  color: red;
+  text-decoration: none;
+}
