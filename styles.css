@@ -12,10 +12,18 @@ p {
   font-family: Garamond;
   font-size: 20px;
 }
+hr {
+    background-color: black;
+    color: black;
+    height: 1px;
+    border: 0 none;
+}
 
 /* Text aligning*/
 #left { text-align: left; }
 #right { text-align: right; }
+#center { text-align: center; }
+.space { margin-top: 75px; }
 
 /* Link settings */
 a:link {
