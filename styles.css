@@ -19,11 +19,17 @@ hr {
     border: 0 none;
 }
 
+
 /* Text aligning*/
 #left { text-align: left; }
 #right { text-align: right; }
 #center { text-align: center; }
 .space { margin-top: 75px; }
+.abs-center{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
 
 /* Link settings */
 a:link {
