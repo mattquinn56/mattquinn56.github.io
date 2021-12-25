@@ -2,12 +2,14 @@
 body {
   font-family: Helvetica;
   background-color: lightsteelblue;
-  margin: 2% 10%;
+  margin: 2% 5%;
 }
+
 h1 {
   font-size: 30px;
   text-align: center;
 }
+
 p {
   font-family: Garamond;
   font-size: 20px;
