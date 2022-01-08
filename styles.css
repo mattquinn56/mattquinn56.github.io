@@ -21,6 +21,13 @@ hr {
     border: 0 none;
 }
 
+::selection {
+  background: #C08080; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #C08080; /* Gecko Browsers */
+}
+
 
 /* Text aligning*/
 #left { text-align: left; }
