@@ -13,7 +13,7 @@
 <br>
 
 <h2>Symbiosis</h2>
-<p>A 2D puzzle-platformer game created for desktop computers; click <a href="https://gdiac.cs.cornell.edu/temp/showcase/gallery/symbiosis/"></a>here</a> for a synopsis.
+<p>A 2D puzzle-platformer game created for desktop computers; click <a href="https://gdiac.cs.cornell.edu/temp/showcase/gallery/symbiosis/">here</a> for a synopsis.
     For the game, I created a custom shading pipeline using LibGDX's OpenGL integration,
     handled everything to do with graphics, and much more. We are currently working on a port to Unity followed by a release on Steam (hopefully).</p>
 <p><a href="https://gdiac.cs.cornell.edu/temp/showcase/gallery/symbiosis/">Showcase + Download Link</a></p>
@@ -26,7 +26,9 @@
 
 <h2>Monte Carlo Ray Tracing</h2>
 <p>A CPU-based real time ray tracer using the Embree API that does physics based shading. 
-    Computes illumination from area and environment lights using Monte Carlo techniques.</p>
+    Computes illumination from area and environment lights using <a href="http://simonstechblog.blogspot.com/2011/12/microfacet-brdf.html">microfacet materials</a>
+     and <a href="https://en.wikipedia.org/wiki/Path_tracing">Monte Carlo</a> techniques. 
+    The application uses assimp to parse .obj and .glb files, and renders them at interactive rates.</p>
     <p><a href="https://github.coecis.cornell.edu/yz2698/Interactive-ray-tracing/commit/f7eb2ca9b81d6b1856ede3ed067329c64f270b4b">Source Code</a> (currently only available to members of the Cornell community)</p>
     <img src="images/mcraytrace1.png" alt="stanford bunny" height = "300"/>
     <img src="images/mcraytrace2.png" alt="staircase demo" height = "300"/>
@@ -35,8 +37,10 @@
 <hr>
 
 <h2>Rendering Pipeline</h2>
-<p>A GPU-based renderer using the OpenGL API. Uses a deferred pipeline to achieve shadow mapping, 
-    ambient illumination, and bloom. A forward pipeline is used to support mesh animation.</p>
+<p>An interactive GPU-based renderer using the OpenGL API. Uses a <a href="https://learnopengl.com/Advanced-Lighting/Deferred-Shading">deferred pipeline</a> to achieve
+     <a href="https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping">shadow mapping</a>, <a href="https://learnopengl.com/Advanced-Lighting/SSAO">SSAO</a>, 
+    and a <a href="https://learnopengl.com/Advanced-Lighting/Bloom">bloom filter</a> with a sun-sky model. 
+    A forward pipeline is used to support <a href="https://learnopengl.com/Guest-Articles/2020/Skeletal-Animation">skeletal animation</a>.
 <p><a href="https://github.coecis.cornell.edu/yz2698/Interactive-ray-tracing/commit/ee28d211ed566df6a82c0210c43e28880d13d61c">Source Code</a> (currently only available to members of the Cornell community)</p>
 <img src="images/pipeline1.png" alt="stanford bunny" height = "300"/>
 <img src="images/pipeline2.png" alt="tree demo" height = "300"/>
