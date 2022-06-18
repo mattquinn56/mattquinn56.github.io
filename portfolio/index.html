@@ -12,22 +12,56 @@
 <p id=center>A collection of my projects, sorted by my most recent first</p>
 <br>
 
-<!-- Template
-<h2>Title</h2>
-<p>Description</p>
-<p><a href="javascript:void(0);">Source Code</a></p>
-<img src="images/undefined.png" alt="project image" width = "600"/>
+<h2>Symbiosis</h2>
+<p>A 2D puzzle-platformer game created for desktop computers; click <a href="https://gdiac.cs.cornell.edu/temp/showcase/gallery/symbiosis/"></a>here</a> for a synopsis.
+    For the game, I created a custom shading pipeline using LibGDX's OpenGL integration,
+    handled everything to do with graphics, and much more. We are currently working on a port to Unity followed by a release on Steam (hopefully).</p>
+<p><a href="https://gdiac.cs.cornell.edu/temp/showcase/gallery/symbiosis/">Showcase + Download Link</a></p>
+<video height="400" controls>
+    <source src="videos/symbiosistrailer.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
 
 <hr>
--->
 
-<h2>Ray Tracing</h2>
-<p>A ground-up implementation of a ray tracer in C++. The user is able to select from several different presets to render in any resolution. The ray tracer uses perspective cameras, ray-sphere and ray-triangle intersection, the <a href="https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_reflection_model">Blinn-Phong model</a>, shadows, and mirror reflection.</p>
-<p><a href="raytracer/index.html">More Images</a></p>
+<h2>Monte Carlo Ray Tracing</h2>
+<p>A CPU-based real time ray tracer using the Embree API that does physics based shading. 
+    Computes illumination from area and environment lights using Monte Carlo techniques.</p>
+    <p><a href="https://github.coecis.cornell.edu/yz2698/Interactive-ray-tracing/commit/f7eb2ca9b81d6b1856ede3ed067329c64f270b4b">Source Code</a> (currently only available to members of the Cornell community)</p>
+    <img src="images/mcraytrace1.png" alt="stanford bunny" height = "300"/>
+    <img src="images/mcraytrace2.png" alt="staircase demo" height = "300"/>
+    <img src="images/mcraytrace3.png" alt="tree demo" height = "300"/>
+
+<hr>
+
+<h2>Rendering Pipeline</h2>
+<p>A GPU-based renderer using the OpenGL API. Uses a deferred pipeline to achieve shadow mapping, 
+    ambient illumination, and bloom. A forward pipeline is used to support mesh animation.</p>
+<p><a href="https://github.coecis.cornell.edu/yz2698/Interactive-ray-tracing/commit/ee28d211ed566df6a82c0210c43e28880d13d61c">Source Code</a> (currently only available to members of the Cornell community)</p>
+<img src="images/pipeline1.png" alt="stanford bunny" height = "300"/>
+<img src="images/pipeline2.png" alt="tree demo" height = "300"/>
+
+<hr>
+
+<h2>Steam Game Rating Prediction</h2>
+<p>A tool for game developers that can predict the rating their game will receive on Steam based on a subset of features of their game. 
+    Web scraping was used to obtain the training data, and the subset of features was selected by measuring feature importance on this. 
+    This project also utilized SMOTE, sentiment analysis, a GUI, and a collection of machine learning algorithms (of which Random Forest performed best at a 56% precision).</p>
+<p><a href="https://github.coecis.cornell.edu/mtq6/steam-ratings">Source Code</a> (currently only available to members of the Cornell community)</p>
+<p><a href="downloads/4701 Final Presentation.pdf">Presentation Slides</a></p>
+<img src="images/steamaiexcerpt.png" alt="presentation slide" height = "300"/>
+
+<hr>
+
+<h2>Ground-Up Ray Tracing</h2>
+<p>An implementation of a CPU-based ray tracer from scratch in C++. The user is able to select from
+    several different presets to render in any resolution. The ray tracer uses perspective cameras, ray-sphere
+    and ray-triangle intersection, the Blinn-Phong model, shadows, and mirror reflection.</p>
 <p><a href="downloads/ray_tracing.exe">Download Link</a></p>
 <p><a href="https://github.com/mattquinn56/ray-tracing">Source Code</a></p>
-<img src="images/raytrace1.png" alt="three spheres" height = "337.5"/>
-<img src="images/raytrace3.png" alt="six rainbow spheres" height = "337.5"/>
+<img src="images/raytrace1.png" alt="three spheres" height = "250"/>
+<img src="images/raytrace2.png" alt="two spheres" height = "250"/>
+<img src="images/raytrace3.png" alt="six rainbow spheres" height = "250"/>
 
 <hr>
 
