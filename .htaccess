@@ -4,3 +4,7 @@ AddType video/mp4 .mp4
 AddType video/mp4 .m4v
 AddType video/mp4 .m4p
 AddType video/webm .webm
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC, L]
