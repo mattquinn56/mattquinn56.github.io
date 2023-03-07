@@ -1,0 +1,58 @@
+/* Text formatting*/
+body {
+  font-family: Helvetica;
+  background-color: lightsteelblue;
+  margin: 2% 10%;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+p {
+  font-family: Garamond;
+  font-size: 20px;
+}
+hr {
+    background-color: black;
+    color: black;
+    height: 1px;
+    border: 0 none;
+}
+
+::selection {
+  background: #C08080; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #C08080; /* Gecko Browsers */
+}
+
+
+/* Text aligning*/
+#left { text-align: left; }
+#right { text-align: right; }
+#center { text-align: center; }
+.space { margin-top: 75px; }
+.abs-center{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+/* Link settings */
+a:link {
+  color: maroon;
+  text-decoration: none;
+}
+a:visited {
+  color: maroon;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  color: red;
+  text-decoration: none;
+}
