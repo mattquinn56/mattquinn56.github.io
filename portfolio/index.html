@@ -12,6 +12,46 @@
 <p id=center>A collection of my projects, sorted by my most recent first</p>
 <br>
 
+<h2>Pivot</h2>
+<h4>Spring 2023</h4>
+<p>A mobile puzzle game in which the character platforms within a 2D cross section of a 3D world. Players have the ability to swipe and 
+    rotate the cross section in arbitrary angles around the character in real-time, which in turn alters the 2D platforming segment. I 
+    was the project lead of the team of 8 working on it, which included programmers, artists, UI/UX designers, and a composer.
+    <br><br>
+    I focused on the graphics work, which involved a deferred pipeline with 8 shader passes in C++ and OpenGL. The pipeline features 
+    3D mesh rendering, 2D cut logic and culling, billboarding, point and ambient lighting, fog shading, animation, normal mapping, 
+    pixelate/ripple effects, and far more. My code was extremely efficient to allow the game to run in real-time despite the intensive 
+    re-computation of the physics world every rotation frame.
+    <br><br>
+    The game won the “Most Innovative” award during the end-of-semester showcase, and due to my graphics work I received the only A+ in the course of 96 students.
+    </p>
+<p><a href="downloads/Pivot-windows.zip">Windows Build</a>, 
+    <a href="javascript:void(0)">Mac Build</a> (coming soon), 
+    <a href="https://testflight.apple.com/join/LpfrBC7t">iOS Testflight Link</a></p>
+<p><a href="https://gdiac.cs.cornell.edu/gdiac/showcase/gallery/pivot/">Showcase Link</a></p>
+<!-- GIF 1 - laboratory near control panel -->
+<!-- GIF 2 - outside near ruins -->
+<video height="400" controls>
+    <source src="https://github.com/mattquinn56/mattquinn56.github.io/blob/main/portfolio/videos/pivottrailer.mp4?raw=true" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<hr>
+
+<h2>Large-Scale Particle Simulation</h2>
+<h4>Spring 2023</h4>
+<p>A simulation capable of running 200,000 particles at over 60fps. Features include 3D collision optimized via spatial subdivision, 
+    dynamic particle regeneration, and textures dictating color, mass, and acceleration fields. 
+    The user is able to “draw” on the simulation, creating a current in the acceleration field, and is able to move the camera freely. 
+    Inspired by Refik Anadol: Unsupervised, this project is meant to deliver an aesthetically pleasing and interactive user experience. 
+    This was written using Taichi and was worked on with a group of four.
+</p>
+<!-- GIF 3 - interesting particle sim -->
+<p><a href="downloads/5643 Final Presentation.pdf">Presentation Slides</a></p>
+<p><a href="https://github.coecis.cornell.edu/smk362/cs5643-final-project">Source Code</a> (currently only available to members of the Cornell community)</p>
+
+<hr>
+
 <h2>Symbiosis</h2>
 <h4>Spring 2022</h4>
 <p>A 2D puzzle-platformer game created by a team of 8 for desktop computers.
