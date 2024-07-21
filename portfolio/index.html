@@ -39,19 +39,14 @@
 
 <hr>
 
-<h2>Large-Scale Particle Simulation</h2>
-<h4>Spring 2023</h4>
-<p>A simulation capable of running 200,000 particles at over 60fps. Features include 3D collision optimized via spatial subdivision, 
-    dynamic particle regeneration, and textures dictating color, mass, and acceleration fields. 
-    The user is able to “draw” on the simulation, creating a current in the acceleration field, and is able to move the camera freely. 
-    Inspired by <a href="https://www.moma.org/calendar/exhibitions/5535">Refik Anadol: Unsupervised</a>, this project is meant to deliver an aesthetically pleasing and interactive user experience. 
-    This was written using <a href="taichi-lang.org">Taichi</a> and was worked on with a group of four.
+<h2>Vulkan Ray Tracer</h2>
+<h4>Spring 2024</h4>
+<p>Integrated Vulkan ray tracing into an existing rasterization framework to enhance visual quality. Implemented acceleration structures, double buffering, 
+    texture/material/environment mapping, area illumination, and anti-aliasing. Completed as a means to foray into the world of low-level 
+    graphics APIs, which I found to be very rewarding.
 </p>
-<!-- GIF 3 - interesting particle sim -->
-<p><a href="downloads/5643 Final Presentation.pdf">Presentation Slides</a></p>
-<p><a href="https://github.coecis.cornell.edu/smk362/cs5643-final-project">Source Code</a> (currently only available to members of the Cornell community)</p>
-<img src="images/particles1.png" alt="particles 1" height = "400"/>
-<img src="images/particles2.png" alt="particles 2" height = "400"/>
+<p><a href="https://github.com/mattquinn56/Vulkan-Engine">Source Code</a></p>
+<img src="images/vulkan1.png" alt="demo vulkan image" height = "400"/>
 
 <hr>
 
@@ -69,28 +64,35 @@
 
 <hr>
 
-<h2>Monte Carlo Path Tracing</h2>
-<h4>Spring 2022</h4>
-<p>A CPU-based real time path tracer using the Embree API that does physics based shading. 
-    Computes illumination from area and environment lights using <a href="http://simonstechblog.blogspot.com/2011/12/microfacet-brdf.html">microfacet materials</a>
-     and <a href="https://en.wikipedia.org/wiki/Path_tracing">Monte Carlo</a> techniques. 
-    The application uses assimp to parse .obj and .glb files, and renders them at interactive rates.</p>
-    <p><a href="https://github.coecis.cornell.edu/yz2698/Interactive-ray-tracing/commit/f7eb2ca9b81d6b1856ede3ed067329c64f270b4b">Source Code</a> (currently only available to members of the Cornell community)</p>
-    <img src="images/mcraytrace1.png" alt="stanford bunny" height = "300"/>
-    <img src="images/mcraytrace2.png" alt="staircase demo" height = "300"/>
-    <img src="images/mcraytrace3.png" alt="tree demo" height = "300"/>
+<h2>Large-Scale Particle Simulation</h2>
+<h4>Spring 2023</h4>
+<p>A simulation capable of running 200,000 particles at over 60fps. Features include 3D collision optimized via spatial subdivision, 
+    dynamic particle regeneration, and textures dictating color, mass, and acceleration fields. 
+    The user is able to “draw” on the simulation, creating a current in the acceleration field, and is able to move the camera freely. 
+    Inspired by <a href="https://www.moma.org/calendar/exhibitions/5535">Refik Anadol: Unsupervised</a>, this project is meant to deliver an aesthetically pleasing and interactive user experience. 
+    This was written using <a href="taichi-lang.org">Taichi</a> and was worked on with a group of four.
+</p>
+<!-- GIF 3 - interesting particle sim -->
+<p><a href="downloads/5643 Final Presentation.pdf">Presentation Slides</a></p>
+<p><a href="https://github.coecis.cornell.edu/smk362/cs5643-final-project">Source Code</a> (currently only available to members of the Cornell community)</p>
+<img src="images/particles1.png" alt="particles 1" height = "400"/>
+<img src="images/particles2.png" alt="particles 2" height = "400"/>
 
 <hr>
 
-<h2>Rendering Pipeline</h2>
+<h2>Monte Carlo Path Tracing</h2>
 <h4>Spring 2022</h4>
-<p>An interactive GPU-based renderer using the OpenGL API. Uses a <a href="https://learnopengl.com/Advanced-Lighting/Deferred-Shading">deferred pipeline</a> to achieve
+<p> A real time CPU-based path tracer using Embree combined with a rasterizer using OpenGL. 
+    Computes illumination from area and environment lights using <a href="http://simonstechblog.blogspot.com/2011/12/microfacet-brdf.html">microfacet materials</a>
+     and <a href="https://en.wikipedia.org/wiki/Path_tracing">Monte Carlo</a> techniques. Uses a <a href="https://learnopengl.com/Advanced-Lighting/Deferred-Shading">deferred pipeline</a> to achieve
      <a href="https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping">shadow mapping</a>, <a href="https://learnopengl.com/Advanced-Lighting/SSAO">SSAO</a>, 
-    and a <a href="https://learnopengl.com/Advanced-Lighting/Bloom">bloom filter</a> with a sun-sky model. 
-    A forward pipeline is used to support <a href="https://learnopengl.com/Guest-Articles/2020/Skeletal-Animation">skeletal animation</a>.
-<p><a href="https://github.coecis.cornell.edu/yz2698/Interactive-ray-tracing/commit/ee28d211ed566df6a82c0210c43e28880d13d61c">Source Code</a> (currently only available to members of the Cornell community)</p>
-<img src="images/pipeline1.png" alt="stanford bunny" height = "300"/>
-<img src="images/pipeline2.png" alt="tree demo" height = "300"/>
+    and a <a href="https://learnopengl.com/Advanced-Lighting/Bloom">bloom filter</a> with a sun-sky model. A forward pipeline is used to support 
+    <a href="https://learnopengl.com/Guest-Articles/2020/Skeletal-Animation">skeletal animation</a>. The application uses assimp to parse .obj and .glb 
+    files, and renders them at interactive rates.</p>
+    <p><a href="https://github.coecis.cornell.edu/yz2698/Interactive-ray-tracing">Source Code</a> (currently only available to members of the Cornell community)</p>
+    <img src="images/mcraytrace1.png" alt="stanford bunny" height = "300"/>
+    <img src="images/mcraytrace2.png" alt="staircase demo" height = "300"/>
+    <img src="images/mcraytrace3.png" alt="tree demo" height = "300"/>
 
 <hr>
 
