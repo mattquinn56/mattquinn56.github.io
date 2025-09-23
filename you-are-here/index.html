@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>You’re already here Matthew Quinn</title>
+<meta name="description" content="A tiny reminder page for the ‘Website’ personal link." />
+
+
+<!-- Styles (project-site safe) -->
+<link rel="preload" href="../styles.css" as="style">
+<link rel="stylesheet" href="../styles.css">
+
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="../images/cpu.ico" />
+<link rel="icon" href="../images/cpu.ico" />
+</head>
+<body>
+<a href="#main" class="visually-hidden">Skip to content</a>
+
+
+<main id="main" class="section container center">
+<div class="section-header" style="justify-content:center">
+<h1>you’re already on my website, dummy</h1>
+</div>
+<p class="muted mt-3">(but thanks for your curiosity.)</p>
+
+
+<div class="cta-row" style="justify-content:center; margin-top: 2rem;">
+<a class="btn btn-primary" href="../index.html">Okay, proceed :(</a>
+</div>
+</main>
+
+
+<!-- Footer -->
+<footer class="site-footer">
+<div class="container row">
+<small>© <span id="year"></span> Matthew Quinn</small>
+<div>
+<a href="mailto:mtquinn56@gmail.com">mtquinn56@gmail.com</a>
+· <a href="https://github.com/mattquinn56" target="_blank" rel="noopener">GitHub</a>
+· <a href="https://www.linkedin.com/in/matthew-quinn-592b5b175/" target="_blank" rel="noopener">LinkedIn</a>
+· <a href="../you-are-here/index.html">Website</a>
+</div>
+</div>
+</footer>
+
+
+<script>
+(() => {
+const y = document.getElementById('year');
+if (y) y.textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

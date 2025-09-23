@@ -1,126 +1,323 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="../styles.css">
-<link rel="shortcut icon" href="../images/cpu.ico" />
-<link rel="icon" href="../images/cpu.ico" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Matthew Quinn</title>
+  <meta name="description" content="Selected projects by Matthew Quinn: graphics, rendering, engines, and interactive work." />
+
+  <!-- Styles -->
+  <link rel="preload" href="../styles.css" as="style">
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../images/cpu.ico" />
+  <link rel="icon" href="../images/cpu.ico" />
 </head>
 <body>
+  <a href="#main" class="visually-hidden">Skip to content</a>
 
-<h2><a href="../index.html">Homepage</a></h2>
-<h2><a href="../portfolio-older/index.html">Older Projects</a></h2>
-<h1>Portfolio</h1>
-<p id=center>A collection of some projects I've worked on</p>
-<br>
+  <!-- Header / Nav -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a class="brand" href="../index.html" aria-label="Home">
+        <span>Matthew Quinn</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="index.html" aria-current="page">Portfolio</a>
+        <a href="../portfolio-older/index.html">Older</a>
+        <a href="../contact/index.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<h2>Vulkan RTX Ray Tracer</h2>
-<h4>Ongoing (started Spring 2024)</h4>
-<p>Integrated Vulkan ray tracing into an existing rasterization framework to enhance visual quality. Implemented simple volumetric effects, asynchronous GPU/CPU execution pipelines, double buffering, and command batching, 
-acceleration structures, shader binding tables, and texture/material/environment mapping. Added progressive Monte Carlo light sampling, MSAA+TAA anti-aliasing, reflections, and shadows, profiling with Nsight Graphics.
-<br><br>
-The project is currently being worked on, with future plans to add complex volumetric effects and denoising.
-</p>
-<p><a href="https://github.com/mattquinn56/Vulkan-Engine">Source Code</a></p>
-<img src="images/vulkan2.png" alt="demo vulkan image" height = "400"/>
+  <main id="main">
+    <!-- Title / Intro -->
+    <section class="section container" aria-labelledby="title">
+      <div class="section-header">
+        <div>
+          <div class="eyebrow">Selected Work</div>
+          <h1 id="title">Graphics & Interactive Projects</h1>
+        </div>
+        <a class="btn btn-ghost" href="../portfolio-older/index.html">Older Projects →</a>
+      </div>
+      <p class="muted">A selection of recent graphics projects.</p>
+    </section>
 
-<hr>
+    <!-- Grid of project cards (links to anchors on the same page) -->
+    <section class="container" aria-label="Project grid">
+      <div class="grid">
+        <!-- Vulkan RTX Ray Tracer -->
+        <article class="card reveal">
+          <a href="#vulkan-rtx" aria-label="Vulkan RTX Ray Tracer">
+            <div class="card-media">
+              <img class="cover" src="images/vulkan2.png" alt="Vulkan ray traced render" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Vulkan RTX Ray Tracer</h3>
+              <p class="card-desc">PBR ray tracing integrated into a Vulkan renderer: microfacet BRDF, adaptive MSAA+TAA, reflections, volumetric effects (WIP).</p>
+              <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">Vulkan</span>
+                <span class="tag">GLSL</span>
+                <span class="tag">Nsight Graphics</span>
+                <span class="tag">VMA</span>
+              </div>
+            </div>
+          </a>
+        </article>
 
-<h2>PIVOT</h2>
-<h4>Spring 2023</h4>
-<p>A mobile puzzle game in which the character platforms within a 2D cross section of a 3D world. Players have the ability to swipe and 
-    rotate the cross section in arbitrary angles around the character in real-time, which in turn alters the 2D platforming segment. I 
-    was the project lead of the team of 8 working on it, which included programmers, artists, UI/UX designers, and a composer.
-    <br><br>
-    I focused on the graphics work, which involved a deferred pipeline with 8 shader passes in C++ and OpenGL. The pipeline features 
-    3D mesh rendering, 2D cut logic and culling, <a href="https://en.wiktionary.org/wiki/billboarding">billboarding</a>, point and ambient lighting, fog shading, animation, 
-    <a href="https://en.wikipedia.org/wiki/Normal_mapping">normal mapping</a>, 
-    pixelate/ripple effects, and far more. My code was extremely efficient to allow the game to run in real-time despite the intensive 
-    re-computation of the physics world every rotation frame.
-    <br><br>
-    The game won the “Most Innovative” award during the end-of-semester showcase, and I was the sole recipient of an A+ in a class of 96 students due to technical contributions.
-    </p>
-<p><a href="https://github.com/mattquinn56/mattquinn56.github.io/raw/main/portfolio/downloads/Pivot-windows.zip?download=">Windows Build</a>, 
-    <a href="javascript:void(0)">Mac Build</a> (coming soon), 
-    <a href="https://testflight.apple.com/join/LpfrBC7t">iOS Testflight Link</a></p>
-<p><a href="https://github.com/sfleischman27/HyperCube/tree/main/Pivot/source">Source Code</a></p>
-<p><a href="https://gdiac.cs.cornell.edu/gdiac/showcase/gallery/pivot/">Showcase Link</a></p>
-<!-- GIF 1 - laboratory near control panel -->
-<!-- GIF 2 - outside near ruins -->
-<video height="400" controls>
-    <source src="https://github.com/mattquinn56/mattquinn56.github.io/blob/main/portfolio/videos/pivottrailer.mp4?raw=true" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-<img src="images/pivot3.gif" alt="pivot gamepla demo" height = "350"/>
+        <!-- PIVOT -->
+        <article class="card reveal">
+          <a href="#pivot" aria-label="PIVOT mobile puzzle game">
+            <div class="card-media">
+              <img class="cover" src="images/pivot3.gif" alt="PIVOT gameplay" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">PIVOT</h3>
+              <p class="card-desc">Mobile puzzle game with a custom deferred pipeline (OpenGL/C++), cut‑plane logic, and real‑time rotation.</p>
+              <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">OpenGL</span>
+                <span class="tag">RenderDoc</span>
+              </div>
+            </div>
+          </a>
+        </article>
 
-<hr>
+        <!-- Symbiosis -->
+        <article class="card reveal">
+          <a href="#symbiosis" aria-label="Symbiosis 2D puzzle-platformer">
+            <div class="card-media">
+              <!-- If you add a poster image later, swap this <video> for an <img>. -->
+              <video class="cover" preload="metadata" muted playsinline loop>
+                <source src="videos/symbiosistrailer.mp4?raw=true" type="video/mp4" />
+              </video>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Symbiosis</h3>
+              <p class="card-desc">Custom deferred shading in LibGDX/OpenGL: lighting, normal mapping, parallax, and special effects.</p>
+              <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">OpenGL</span>
+                <span class="tag">LibGDX</span>
+              </div>
+            </div>
+          </a>
+        </article>
 
-<h2>Symbiosis</h2>
-<h4>Spring 2022</h4>
-<p>A 2D puzzle-platformer game created by a team of 8 for desktop computers.
-    I focused mainly on the graphics work by creating a custom deferred shading pipeline using LibGDX's OpenGL integration. 
-    The pipeline included lighting, <a href="https://en.wikipedia.org/wiki/Normal_mapping">normal mapping</a>, parallax, smooth camera movement, and additional shader passes for special effects. 
-    Other than graphics work, I worked on level design, code architecture, playtesting, game concepts, and much more.</p>
-<p><a href="https://gdiac.cs.cornell.edu/temp/showcase/gallery/symbiosis/">Showcase + Download Link</a></p>
-<video height="400" controls>
-    <source src="https://github.com/mattquinn56/mattquinn56.github.io/blob/main/portfolio/videos/symbiosistrailer.mp4?raw=true" type="video/mp4">
-  Your browser does not support the video tag.
-  </video>
+        <!-- Multimodal Rendering Engine -->
+        <article class="card reveal">
+          <a href="#multimodal" aria-label="Multimodal Rendering Engine">
+            <div class="card-media">
+              <img class="cover" src="images/mcraytrace1.png" alt="Embree + OpenGL render" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Multimodal Rendering Engine</h3>
+              <p class="card-desc">CPU Embree path tracer fused with an OpenGL deferred rasterizer; SSAO, shadows, bloom, HDR tonemapping.</p>
+              <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">OpenGL</span>
+                <span class="tag">Embree</span>
+              </div>
+            </div>
+          </a>
+        </article>
 
-<hr>
+        <!-- Large-Scale Particle Simulation -->
+        <article class="card reveal">
+          <a href="#particles" aria-label="Large-Scale Particle Simulation">
+            <div class="card-media">
+              <img class="cover" src="images/particles1.png" alt="Particle simulation visualization" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Large‑Scale Particle Simulation</h3>
+              <p class="card-desc">200k particles at 60+ FPS with spatial subdivision, draw‑to‑field interactions, and free camera.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Taichi</span>
+              </div>
+            </div>
+          </a>
+        </article>
 
-<h2>Multimodal Rendering Engine</h2>
-<h4>Spring 2022</h4>
-<p> A real time CPU-based path tracer using Embree combined with a rasterizer using OpenGL. 
-    Computes illumination from area and environment lights using <a href="http://simonstechblog.blogspot.com/2011/12/microfacet-brdf.html">microfacet materials</a>
-     and <a href="https://en.wikipedia.org/wiki/Path_tracing">Monte Carlo</a> techniques. Uses a <a href="https://learnopengl.com/Advanced-Lighting/Deferred-Shading">deferred pipeline</a> to achieve
-     <a href="https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping">shadow mapping</a>, <a href="https://learnopengl.com/Advanced-Lighting/SSAO">SSAO</a>, 
-    and a <a href="https://learnopengl.com/Advanced-Lighting/Bloom">bloom filter</a> with a sun-sky model. A forward pipeline is used to support 
-    <a href="https://learnopengl.com/Guest-Articles/2020/Skeletal-Animation">skeletal animation</a>. The application uses assimp to parse .obj and .glb 
-    files, and renders them at interactive rates.</p>
-    <p><a href="https://github.coecis.cornell.edu/yz2698/Interactive-ray-tracing">Source Code</a> (currently only available to members of the Cornell community)</p>
-    <img src="images/mcraytrace1.png" alt="stanford bunny" height = "300"/>
-    <img src="images/mcraytrace2.png" alt="staircase demo" height = "300"/>
-    <img src="images/mcraytrace3.png" alt="tree demo" height = "300"/>
+        <!-- Ground-Up Ray Tracing -->
+        <article class="card reveal">
+          <a href="#cpu-raytracing" aria-label="Ground-Up Ray Tracing in C++">
+            <div class="card-media">
+              <img class="cover" src="images/raytrace1.png" alt="CPU ray tracer spheres" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Ground‑Up Ray Tracing</h3>
+              <p class="card-desc">C++ CPU ray tracer (SFML): spheres/triangles, Blinn‑Phong, shadows, mirror reflection.</p>
+              <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">SFML</span>
+              </div>
+            </div>
+          </a>
+        </article>
 
-<hr>
+        <!-- Procedural Terrain Generation -->
+        <article class="card reveal">
+          <a href="#terrain" aria-label="Procedural Terrain Generation in Unity">
+            <div class="card-media">
+              <img class="cover" src="images/terrain1.png" alt="Marching Cubes terrain in Unity" loading="lazy" decoding="async" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Procedural Terrain Generation</h3>
+              <p class="card-desc">Unity Marching Cubes terrain with chunking, noise‑driven heights, and compute shaders.</p>
+              <div class="tags">
+                <span class="tag">Unity</span>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
 
-<h2>Large-Scale Particle Simulation</h2>
-<h4>Spring 2023</h4>
-<p>A simulation capable of running 200,000 particles at over 60fps. Features include 3D collision optimized via spatial subdivision, 
-    dynamic particle regeneration, and textures dictating color, mass, and acceleration fields. 
-    The user is able to “draw” on the simulation, creating a current in the acceleration field, and is able to move the camera freely. 
-    Inspired by <a href="https://www.moma.org/calendar/exhibitions/5535">Refik Anadol: Unsupervised</a>, this project is meant to deliver an aesthetically pleasing and interactive user experience. 
-    This was written using <a href="taichi-lang.org">Taichi</a> and was worked on with a group of four.
-</p>
-<!-- GIF 3 - interesting particle sim -->
-<p><a href="downloads/5643 Final Presentation.pdf">Presentation Slides</a></p>
-<p><a href="https://github.coecis.cornell.edu/smk362/cs5643-final-project">Source Code</a> (currently only available to members of the Cornell community)</p>
-<img src="images/particles1.png" alt="particles 1" height = "400"/>
-<img src="images/particles2.png" alt="particles 2" height = "400"/>
+    <!-- Details (preserve your existing write‑ups) -->
+    <section class="section container prose">
+      <hr>
+      <article id="vulkan-rtx">
+        <h2>Vulkan RTX Ray Tracer</h2>
+        <p><strong>Ongoing (started Spring 2024)</strong></p>
+        <p>Integrated Vulkan ray tracing into an existing rasterization framework to enhance visual quality. Implemented simple volumetric effects, double buffering, and command batching, acceleration structures, shader binding tables, and texture/material/environment mapping. Added progressive Monte Carlo light sampling, MSAA+TAA anti‑aliasing, reflections, and shadows, profiling with Nsight Graphics.</p>
+        <p>The project is currently being worked on, with future plans to add complex volumetric effects and denoising.</p>
+        <p><a href="https://github.com/mattquinn56/Vulkan-Engine">Source Code</a></p>
+        <div class="media-16x9">
+          <img class="cover" src="images/vulkan2.png" alt="Vulkan render" />
+        </div>
+      </article>
 
-<hr>
+      <hr>
+      <article id="pivot">
+        <h2>PIVOT</h2>
+        <p><strong>Spring 2023</strong></p>
+        <p>A mobile puzzle game in which the character platforms within a 2D cross section of a 3D world. Players have the ability to swipe and rotate the cross section in arbitrary angles around the character in real‑time, which in turn alters the 2D platforming segment. I was the project lead of the team of 8 working on it, which included programmers, artists, UI/UX designers, and a composer.</p>
+        <p>I focused on the graphics work, which involved a deferred pipeline with 8 shader passes in C++ and OpenGL. The pipeline features 3D mesh rendering, 2D cut logic and culling, <a href="https://en.wiktionary.org/wiki/billboarding">billboarding</a>, point and ambient lighting, fog shading, animation, <a href="https://en.wikipedia.org/wiki/Normal_mapping">normal mapping</a>, pixelate/ripple effects, and far more. My code was extremely efficient to allow the game to run in real‑time despite the intensive re‑computation of the physics world every rotation frame.</p>
+        <p>The game won the “Most Innovative” award during the end‑of‑semester showcase, and I was the sole recipient of an A+ in a class of 96 students due to technical contributions.</p>
+        <p><a href="https://github.com/mattquinn56/mattquinn56.github.io/raw/main/portfolio/downloads/Pivot-windows.zip?download=">Windows Build</a>, <a href="https://testflight.apple.com/join/LpfrBC7t">iOS Testflight Link</a></p>
+        <p><a href="https://github.com/sfleischman27/HyperCube/tree/main/Pivot/source">Source Code</a></p>
+        <p><a href="https://gdiac.cs.cornell.edu/gdiac/showcase/gallery/pivot/">Showcase Link</a></p>
+        <div class="media-16x9">
+          <video class="cover" controls>
+            <source src="videos/pivottrailer.mp4?raw=true" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="media-4x3 mt-4">
+          <img class="cover" src="images/pivot3.gif" alt="PIVOT gameplay" />
+        </div>
+      </article>
 
-<h2>Ground-Up Ray Tracing</h2>
-<h4>Winter 2022</h4>
-<p>An implementation of a CPU-based ray tracer in C++ using <a href="https://www.sfml-dev.org/">SFML</a> to display the image. The user is able to select from
-    several different presets to render in any resolution. The ray tracer uses perspective cameras, ray-sphere
-    and ray-triangle intersection, the Blinn-Phong model, shadows, and mirror reflection.</p>
-<p><a href="downloads/ray_tracing.exe">Download Link</a></p>
-<p><a href="https://github.com/mattquinn56/ray-tracing">Source Code</a></p>
-<img src="images/raytrace1.png" alt="three spheres" height = "250"/>
-<img src="images/raytrace2.png" alt="two spheres" height = "250"/>
-<img src="images/raytrace3.png" alt="six rainbow spheres" height = "250"/>
+      <hr>
+      <article id="symbiosis">
+        <h2>Symbiosis</h2>
+        <p><strong>Spring 2022</strong></p>
+        <p>A 2D puzzle‑platformer game created by a team of 8 for desktop computers. I focused mainly on the graphics work by creating a custom deferred shading pipeline using LibGDX's OpenGL integration. The pipeline included lighting, <a href="https://en.wikipedia.org/wiki/Normal_mapping">normal mapping</a>, parallax, smooth camera movement, and additional shader passes for special effects. Other than graphics work, I worked on level design, code architecture, playtesting, game concepts, and much more.</p>
+        <p><a href="https://gdiac.cs.cornell.edu/temp/showcase/gallery/symbiosis/">Showcase + Download Link</a></p>
+        <div class="media-16x9">
+          <video class="cover" controls>
+            <source src="videos/symbiosistrailer.mp4?raw=true" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </article>
 
-<hr>
+      <hr>
+      <article id="multimodal">
+        <h2>Multimodal Rendering Engine</h2>
+        <p><strong>Spring 2022</strong></p>
+        <p>A real‑time CPU‑based path tracer using Embree combined with a rasterizer using OpenGL. Computes illumination from area and environment lights using <a href="http://simonstechblog.blogspot.com/2011/12/microfacet-brdf.html">microfacet materials</a> and <a href="https://en.wikipedia.org/wiki/Path_tracing">Monte Carlo</a> techniques. Uses a <a href="https://learnopengl.com/Advanced-Lighting/Deferred-Shading">deferred pipeline</a> to achieve <a href="https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping">shadow mapping</a>, <a href="https://learnopengl.com/Advanced-Lighting/SSAO">SSAO</a>, and a <a href="https://learnopengl.com/Advanced-Lighting/Bloom">bloom filter</a> with a sun‑sky model. A forward pipeline is used to support <a href="https://learnopengl.com/Guest-Articles/2020/Skeletal-Animation">skeletal animation</a>. The application uses assimp to parse .obj and .glb files, and renders them at interactive rates.</p>
+        <p><a href="https://github.coecis.cornell.edu/yz2698/Interactive-ray-tracing">Source Code</a> (Cornell access)</p>
+        <div class="media-4x3">
+          <img class="cover" src="images/mcraytrace1.png" alt="Stanford bunny" />
+        </div>
+        <div class="media-4x3 mt-4">
+          <img class="cover" src="images/mcraytrace3.png" alt="tree demo" />
+        </div>
+      </article>
 
-<h2>Procedural Terrain Generation</h2>
-<h4>Fall 2021</h4>
-<p>A procedurally generated landscape visualized using the <a href="https://graphics.stanford.edu/~mdfisher/MarchingCubes.html">Marching Cubes</a> algorithm in Unity. Terrain generates using several octaves of simplex noise, with its output modifying the ground’s height. <a href="https://docs.unity3d.com/550/Documentation/Manual/ComputeShaders.html">Compute Shader</a> code executes the Marching Cubes algorithm on the terrain and represents it with a mesh object. Additional features include chunking of terrain, proximal generation of chunks around the usable camera, and building/destroying terrain. This was my final project for <a href="https://classes.cornell.edu/browse/roster/FA21/class/CS/4620">Computer Graphics</a> that was completed with two peers.</p>
-<p><a href="downloads/procedural_terrain_gen.zip">Download Link</a></p>
-<p><a href="https://github.coecis.cornell.edu/zls9/cs4620final">Source Code</a> (currently only available to members of the Cornell community)</p>
-<img src="images/terrain1.png" alt="terrain with marching cubes" width = "600"/>
+      <hr>
+      <article id="particles">
+        <h2>Large‑Scale Particle Simulation</h2>
+        <p><strong>Spring 2023</strong></p>
+        <p>A simulation capable of running 200,000 particles at over 60fps. Features include 3D collision optimized via spatial subdivision, dynamic particle regeneration, and textures dictating color, mass, and acceleration fields. The user is able to “draw” on the simulation, creating a current in the acceleration field, and is able to move the camera freely. Inspired by <a href="https://www.moma.org/calendar/exhibitions/5535">Refik Anadol: Unsupervised</a>, this project is meant to deliver an aesthetically pleasing and interactive user experience. This was written using <a href="https://taichi-lang.org">Taichi</a> and was worked on with a group of four.</p>
+        <p><a href="downloads/5643 Final Presentation.pdf">Presentation Slides</a></p>
+        <p><a href="https://github.coecis.cornell.edu/smk362/cs5643-final-project">Source Code</a> (Cornell access)</p>
+        <div class="media-4x3">
+          <img class="cover" src="images/particles1.png" alt="particles visualization 1" />
+        </div>
+        <div class="media-4x3 mt-4">
+          <img class="cover" src="images/particles2.png" alt="particles visualization 2" />
+        </div>
+      </article>
 
+      <hr>
+      <article id="cpu-raytracing">
+        <h2>Ground‑Up Ray Tracing</h2>
+        <p><strong>Winter 2022</strong></p>
+        <p>An implementation of a CPU‑based ray tracer in C++ using <a href="https://www.sfml-dev.org/">SFML</a> to display the image. The user is able to select from several different presets to render in any resolution. The ray tracer uses perspective cameras, ray‑sphere and ray‑triangle intersection, the Blinn‑Phong model, shadows, and mirror reflection.</p>
+        <p><a href="downloads/ray_tracing.exe">Download Link</a></p>
+        <p><a href="https://github.com/mattquinn56/ray-tracing">Source Code</a></p>
+        <div class="media-4x3">
+          <img class="cover" src="images/raytrace1.png" alt="three spheres" />
+        </div>
+        <div class="media-4x3 mt-4">
+          <img class="cover" src="images/raytrace2.png" alt="two spheres" />
+        </div>
+        <div class="media-4x3 mt-4">
+          <img class="cover" src="images/raytrace3.png" alt="six rainbow spheres" />
+        </div>
+      </article>
+
+      <hr>
+      <article id="terrain">
+        <h2>Procedural Terrain Generation</h2>
+        <p><strong>Fall 2021</strong></p>
+        <p>A procedurally generated landscape visualized using the <a href="https://graphics.stanford.edu/~mdfisher/MarchingCubes.html">Marching Cubes</a> algorithm in Unity. Terrain generates using several octaves of simplex noise, with its output modifying the ground’s height. <a href="https://docs.unity3d.com/550/Documentation/Manual/ComputeShaders.html">Compute Shader</a> code executes the Marching Cubes algorithm on the terrain and represents it with a mesh object. Additional features include chunking of terrain, proximal generation of chunks around the usable camera, and building/destroying terrain. This was my final project for <a href="https://classes.cornell.edu/browse/roster/FA21/class/CS/4620">Computer Graphics</a> and was completed with two peers.</p>
+        <p><a href="downloads/procedural_terrain_gen.zip">Download Link</a></p>
+        <p><a href="https://github.coecis.cornell.edu/zls9/cs4620final">Source Code</a> (Cornell access)</p>
+        <div class="media-4x3">
+          <img class="cover" src="images/terrain1.png" alt="terrain with marching cubes" />
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container row">
+      <small>© <span id="year"></span> Matthew Quinn</small>
+      <div>
+        <a href="mailto:mtquinn56@gmail.com">mtquinn56@gmail.com</a>
+        · <a href="https://github.com/mattquinn56" target="_blank" rel="noopener">GitHub</a>
+        · <a href="https://www.linkedin.com/in/matthew-quinn-592b5b175/" target="_blank" rel="noopener">LinkedIn</a>
+        · <a href="../you-are-here/index.html">Website</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tiny JS: reveal + year -->
+  <script>
+    (() => {
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+      const els = document.querySelectorAll('.reveal');
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!prefersReduced && 'IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          for (const e of entries) {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+          }
+        }, { threshold: 0.12 });
+        els.forEach(el => io.observe(el));
+      } else {
+        els.forEach(el => el.classList.add('is-visible'));
+      }
+    })();
+  </script>
 </body>
 </html>
-
-<h1><a href="../portfolio-older/index.html">See Older</a></h1>

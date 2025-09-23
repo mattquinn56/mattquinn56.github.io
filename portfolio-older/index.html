@@ -1,79 +1,168 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="../styles.css">
-<link rel="shortcut icon" href="../images/cpu.ico" />
-<link rel="icon" href="../images/cpu.ico" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Older Portfolio Matthew Quinn</title>
+  <meta name="description" content="Older, non-graphics projects by Matthew Quinn — early work from college and before." />
+
+  <!-- Styles (project-site safe) -->
+  <link rel="preload" href="../styles.css" as="style">
+  <link rel="stylesheet" href="../styles.css">
+  <!-- Optional card override file (safe to keep; does nothing on this page) -->
+  <link rel="stylesheet" href="../styles.overrides.css">
+
+  <!-- Page-specific fix: let list images use natural aspect ratio (no cropping/letterbox) -->
+  <style>
+    .list .media-16x9, .list .media-4x3 { aspect-ratio: auto; }
+    .list .media-16x9 > img, .list .media-16x9 > video,
+    .list .media-4x3 > img, .list .media-4x3 > video {
+      width: 100%;
+      height: auto;
+      object-fit: contain; /* never crop */
+      max-height: min(80vh, 1200px); /* keep very tall images sensible */
+      background: #0a0c10; /* subtle backdrop if letterbox happens */
+    }
+  </style>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../images/cpu.ico" />
+  <link rel="icon" href="../images/cpu.ico" />
 </head>
 <body>
+  <a href="#main" class="visually-hidden">Skip to content</a>
 
-<h2><a href="../index.html">Homepage</a></h2>
-<h2><a href="../portfolio/index.html">Current Portfolio</a></h2>
-<h1>Older Portfolio</h1>
-<p id=center>Projects I've worked on early on in college</p>
-<br>
+  <!-- Header / Nav -->
+  <header class="site-header" role="banner">
+    <div class="container navbar">
+      <a class="brand" href="../index.html" aria-label="Home">
+        <span>Matthew Quinn</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../portfolio/index.html">Portfolio</a>
+        <a href="index.html" aria-current="page">Older</a>
+        <a href="../contact/index.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<h2>Steam Game Rating Prediction</h2>
-<h4>Spring 2022</h4>
-<p>A tool for game developers that can predict the rating their game will receive on Steam based on a subset of features of their game. 
-    Web scraping was used to obtain the training data, and the subset of features was selected by measuring feature importance on this. 
-    This project also utilized SMOTE, sentiment analysis, a GUI, and a collection of machine learning algorithms (of which Random Forest performed best at a 56% precision).</p>
-    <p><a href="../portfolio/downloads/4701 Final Presentation.pdf">Presentation Slides</a></p>
-<p><a href="https://github.coecis.cornell.edu/mtq6/steam-ratings">Source Code</a> (currently only available to members of the Cornell community)</p>
-<img src="../portfolio/images/steamaiexcerpt.png" alt="presentation slide" height = "300"/>
+  <main id="main">
+    <section class="section container" aria-labelledby="title">
+      <div class="section-header">
+        <div>
+          <div class="eyebrow">Earlier Work</div>
+          <h1 id="title">Older / Non‑Graphics Portfolio</h1>
+        </div>
+        <a class="btn btn-ghost" href="../portfolio/index.html">Current Portfolio →</a>
+      </div>
+      <p class="muted">Projects from early college and before.</p>
+    </section>
 
-<hr>
+    <section class="container">
+      <div class="list">
+        <!-- Steam Game Rating Prediction -->
+        <article class="list-item">
+          <h3>Steam Game Rating Prediction</h3>
+          <p><strong>Spring 2022</strong></p>
+          <p>A tool for game developers that predicts the Steam rating a game may receive from a subset of game features. We scraped training data, measured feature importance for selection, and used SMOTE, sentiment analysis, and several ML algorithms (Random Forest performed best at ~56% precision).</p>
+          <p><a href="../portfolio/downloads/4701 Final Presentation.pdf">Presentation Slides</a> · <a href="https://github.coecis.cornell.edu/mtq6/steam-ratings">Source Code</a> (Cornell access)</p>
+          <div class="media-4x3 mt-4">
+            <img class="cover" src="../portfolio/images/steamaiexcerpt.png" alt="Steam ratings project slide excerpt" />
+          </div>
+        </article>
 
-<h2>This Website</h2>
-<h4>Summer 2021</h4>
-<p>A simple website which I coded from scratch in HTML+CSS to showcase myself and interesting things that I've worked on. I bought the domain at Google Domains and hosted it on GitHub.</p>
-<p><a href="https://github.com/mattquinn56/mattquinn56.github.io">Source Code</a></p>
+        <!-- COVID-19 Hospitalizations Prediction for EU Countries -->
+        <article class="list-item">
+          <h3>COVID‑19 Hospitalizations Prediction for EU Countries</h3>
+          <p><strong>Spring 2021</strong></p>
+          <p>Predicted whether hospitalizations would increase/decrease a week ahead (~70% accuracy), then regressed counts. Included custom train/validation splits, preprocessing, and multiple algorithms. Implemented in Python (scikit‑learn, NumPy, pandas) with a Jupyter report.</p>
+          <p><a href="https://github.coecis.cornell.edu/mtq6/CS4780-FinalProject/blob/main/V2_YourNearestNeighbors.ipynb">Source Code</a> (Cornell access)</p>
+        </article>
 
-<hr>
-<h2>COVID-19 Hospitalizations Prediction for EU Countries</h2>
-<h4>Spring 2021</h4>
-<p>A prediction of future COVID-19 hospitalizations given a dataset of EU country-level cases by age group and current hospitalizations. The first part of the project predicts whether hospitalizations would increase or decrease a week from each date (with an accuracy of 70%), and the second part predicts how many hospitalizations would occur. Other features include custom training/validation data splitting, preprocessing, and multiple training algorithms. This was my final project for <a href = "https://classes.cornell.edu/browse/roster/SP21/class/CS/4780">Machine Learning</a> that I worked on with another student. The code was written in Python using sklearn, numpy, pandas, and the report was generated in Jupyter Notebook.</p>
-<p><a href="https://github.coecis.cornell.edu/mtq6/CS4780-FinalProject/blob/main/V2_YourNearestNeighbors.ipynb">Source Code</a> (currently only available to members of the Cornell community)</p>
+        <!-- Game of Go -->
+        <article class="list-item">
+          <h3>Game of Go</h3>
+          <p><strong>Spring 2021</strong></p>
+          <p>A fully playable Go implementation with territory calculation, handicap, variable board sizes, and an Elo ranking system. Course final for CS 3110; built with a team of four in OCaml (functional style), runnable on Ubuntu over SSH.</p>
+          <p><a href="https://github.coecis.cornell.edu/jrw355/cs3110-finalproject">Source Code</a> (Cornell access)</p>
+          <div class="media-4x3 mt-4">
+            <img class="cover" src="../portfolio/images/go1.PNG" alt="Console Go game screenshot" />
+          </div>
+        </article>
 
-<hr>
-<h2>Game of Go</h2>
-<h4>Spring 2021</h4>
-<p>A fully playable game of Go that features territory calculation, handicap, variable board sizes, and an ELO ranking system. This was my final project for <a href = "https://classes.cornell.edu/browse/roster/SP21/class/CS/3110">Data Structures and Functional Programming</a> that I worked on with three others. The code written in OCaml (mainly using its functional features), and it can be run in Ubuntu using a remote SSH.
-<p><a href="https://github.coecis.cornell.edu/jrw355/cs3110-finalproject">Source Code</a> (currently only available to members of the Cornell community)</p>
-<img src="../portfolio/images/go1.PNG" alt="go console" width = "600"/>
+        <!-- 3D Model of the Phi Delta Theta NY Alpha Chapter House -->
+        <article class="list-item">
+          <h3>3D Model of the &Phi;&Delta;&Theta; NY Alpha Chapter House</h3>
+          <p><strong>Spring 2021</strong></p>
+          <p>SketchUp model of my fraternity house at Cornell. Final project for CEE 3080 (Intro to CADD).</p>
+          <div class="media-4x3 mt-4">
+            <img class="cover" src="../portfolio/images/pdt1.PNG" alt="SketchUp model preview of chapter house" />
+          </div>
+        </article>
 
-<hr>
-<h2>3D Model of the ΦΔΘ NY Alpha Chapter House</h2>
-<h4>Spring 2021</h4>
-<p>A model done in SketchUp of my fraternity house at Cornell. This was my final project for <a href = "https://classes.cornell.edu/browse/roster/SP21/class/CEE/3080">Intro to CADD</a>.</p>
-<img src="../portfolio/images/pdt1.PNG" alt="model preview" width = "600"/>
+        <!-- Simon Says -->
+        <article class="list-item">
+          <h3>Simon Says</h3>
+          <p><strong>Spring 2021</strong></p>
+          <p>A motion‑controlled “Simon Says” on a FRDM‑KL25Z development board. Tilt the board to match sequences using the built‑in accelerometer. Written in C with MCUXpresso IDE for CS 3420 (Embedded Systems).</p>
+          <p><a href="https://pages.github.coecis.cornell.edu/ece3140-sp2021/mtq6-smf267/">Project Website</a></p>
+          <div class="media-4x3 mt-4">
+            <img class="cover" src="../portfolio/images/simon1.PNG" alt="Simon Says hardware project in action" />
+          </div>
+        </article>
 
-<hr>
-<h2>Simon Says</h2>
-<h4>Spring 2021</h4>
-<p>A playable game of Simon Says on a development board. Rather than pressing colored buttons to match the sequence like in the original Simon Says, the board must be tilted in the corresponding directions (this was done using the built-in accelerometer). The code was written in C in MCUXpresso IDE to be uploaded onto a FRDM-KL25Z board. This was my final project for <a href = "https://classes.cornell.edu/browse/roster/SP21/class/CS/3420">Embedded Systems</a> that I worked on with another student.</p>
-<p><a href="https://pages.github.coecis.cornell.edu/ece3140-sp2021/mtq6-smf267/">Project Website</a></p>
-<img src="../portfolio/images/simon1.PNG" alt="game being played" width = "600"/>
+        <!-- Weighted ETF Analysis -->
+        <article class="list-item">
+          <h3>Weighted ETF Analysis</h3>
+          <p><strong>Winter 2021</strong></p>
+          <p>Analyzed risk (covariance) vs. reward (expected return) across ETF portfolios. Visualized the efficient frontier and let users pick a target risk to compute the nearest optimal allocation. Built in C++ with a fast solver.</p>
+          <p><a href="https://github.com/szhu7927/portfolio-diversifier">Source Code</a></p>
+        </article>
 
-<hr>
-<h2>Weighted ETF Analysis</h2>
-<h4>Winter 2021</h4>
-<p>A tool that analyzes the risk (covariance) and reward (expected return) of ETFs. The user is able to plug in any amount of ETFs from what our dataset provides; once selected, a risk vs. reward graph is shown depicting every possible portfolio between the ETFs. From there, the user is able to input a desired risk, and the optimal portfolio at the closest risk is outputted. This project is meant to visually depict the <a href="https://www.investopedia.com/terms/e/efficientfrontier.asp#:~:text=The%20efficient%20frontier%20is%20the,for%20the%20level%20of%20risk.">efficient frontier</a>, of which I developed a fast algorithm to determine. This project was completed with two other peers, and was written in C++.</p>
-<p><a href="https://github.com/szhu7927/portfolio-diversifier">Source Code</a></p>
+        <!-- Space Protector -->
+        <article class="list-item">
+          <h3>Space Protector</h3>
+          <p><strong>Summer 2020</strong></p>
+          <p>An asteroids‑like game coded from scratch after CS 1110. Mouse controls, Cartesian/polar math, and increasing difficulty. Implemented in Python with pygame.</p>
+          <p><a href="https://github.com/mattquinn56/SpaceProtector">Source Code</a></p>
+          <div class="media-4x3 mt-4">
+            <img class="cover" src="../portfolio/images/spaceprotect1.png" alt="Space Protector gameplay screenshot" />
+          </div>
+        </article>
 
-<hr>
-<h2>Space Protector</h2>
-<h4>Summer 2020</h4>
-<p>An asteroids-like video game that I coded from scratch the summer after I took <a href ="https://classes.cornell.edu/browse/roster/SP20/class/CS/1110">Intro to Computing</a>. Features include mouse control, polar/cartesian mathematics, increasing difficulty, and spritework. This was coded in Python using pygame.</p>
-<p><a href="https://github.com/mattquinn56/SpaceProtector">Source Code</a></p>
-<img src="../portfolio/images/spaceprotect1.png" alt="space protector game" width = "600"/>
+        <!-- The Cavern -->
+        <article class="list-item">
+          <h3>The Cavern</h3>
+          <p><strong>Spring 2016</strong></p>
+          <p>A Call of Duty: World at War Zombies mod. My first 3D modeling + game design project. 5000+ downloads and multiple YouTube playthroughs.</p>
+          <p><a href="https://zombiemodding.com/index.php?action=downloads;sa=view;down=2043">Download Page</a></p>
+          <div class="media-4x3 mt-4">
+            <img class="cover" src="../portfolio/images/cavern1.png" alt="The Cavern mod screenshot" />
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 
-<hr>
-<h2>The Cavern</h2>
-<h4>Spring 2016</h4>
-<p>A mod I created for Call of Duty: World at War's zombies mode. Created during my freshman year of high school, I consider it to be my first 3D modelling + game design project. It has received over 5000 downloads and multiple YouTube playthroughs.</p>
-<p><a href="https://zombiemodding.com/index.php?action=downloads;sa=view;down=2043">Download Page</a></p>
-<img src="../portfolio/images/cavern1.png" alt="cavern image" width = "600"/>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container row">
+      <small>© <span id="year"></span> Matthew Quinn</small>
+      <div>
+        <a href="mailto:mtquinn56@gmail.com">mtquinn56@gmail.com</a>
+        · <a href="https://github.com/mattquinn56" target="_blank" rel="noopener">GitHub</a>
+        · <a href="https://www.linkedin.com/in/matthew-quinn-592b5b175/" target="_blank" rel="noopener">LinkedIn</a>
+        · <a href="../you-are-here/index.html">Website</a>
+      </div>
+    </div>
+  </footer>
 
+  <script>
+    (() => {
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
