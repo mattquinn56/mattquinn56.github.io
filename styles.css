@@ -100,6 +100,8 @@ hr { border: 0; height: 1px; background: var(--line); margin: var(--space-6) 0; 
 .section { padding: var(--space-2) 0; }
 .section-header { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-5); }
 .eyebrow { color: var(--muted); text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; }
+.eyebrow-spacer { height: 1.2rem; }
+.you-are-here-main { padding-bottom: var(--space-8); }
 
 /* Grid & Cards */
 .grid { display: grid; gap: clamp(16px, 2vw, 28px); grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
